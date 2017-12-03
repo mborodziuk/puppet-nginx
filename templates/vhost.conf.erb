@@ -1,0 +1,9 @@
+server {
+<% if @standard_port %>
+  listen 80;
+<% else %>
+ listen 8080;
+<% end %>
+  root /var/www/<%= @site_name %>;
+  server_name <%= @site_domain %>;
+}
